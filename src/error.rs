@@ -46,3 +46,9 @@ impl Display for Error {
         write!(f, "{:?}", self)
     }
 }
+
+#[cfg(feature = "std")]
+extern crate std;
+
+#[cfg(feature = "std")]
+impl std::error::Error for Error {}

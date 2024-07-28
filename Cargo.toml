@@ -6,7 +6,7 @@ description = "Performant library to deserialize JSON"
 homepage = "https://github.com/jorgecarleitao/json-deserializer"
 repository = "https://github.com/jorgecarleitao/json-deserializer"
 authors = ["Jorge C. Leitao <jorgecarleitao@gmail.com>"]
-keywords = [ "json" ]
+keywords = ["json"]
 edition = "2021"
 
 [dependencies]
@@ -14,15 +14,16 @@ indexmap = { version = "1.5.2", optional = true, default_features = false }
 
 [dev-dependencies]
 proptest = "1"
-serde = {version="1", features = ["derive"], default-features = false}
+serde = { version = "1", features = ["derive"], default-features = false }
 serde_json = "1"
-simd-json = {version = "0.4", features = ["allow-non-simd"]}
+simd-json = { version = "0.4", features = ["allow-non-simd"] }
 
 criterion = "0.3"
 
 [features]
 default = []
 preserve_order = ["indexmap"]
+std = []
 
 [[bench]]
 name = "parse"
